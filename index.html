@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BGC Soil Science — Student Notice Board</title>
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="vb pnd"><b>Waiting for admin approval.</b> Your email is verified. After the admin confirms your account, you can post and see the student list.</div>
+<div class="vb unv"><b>Please verify your email.</b> We sent a link to your inbox (check Spam too). After clicking it, press “I’ve verified”.<br>
+<button class="btn" id="resend">Resend email</button><button class="btn" onclick="location.reload()">I’ve verified</button></div>
+
+<header><div class="w bar">
+<a class="brand" href="#top"><img src="logo.png" alt="Government Barishal College logo"><span>Soil Science</span></a>
+<button class="btn burger" id="bg" aria-label="Menu">☰</button>
+<nav id="nav">
+<a href="#board">Notices</a><a href="#students">Students</a>
+<button class="btn" data-open="adm">👤 Admin Info</button>
+<a class="btn" href="https://m.me/j/AbYNxrHn5dzL3oXn/?send_source=gc%3Acopy_invite_link_t" target="_blank" rel="noopener">💬 Notice Group</a>
+<button class="btn out" data-open="login">Log in</button><button class="btn pri out" data-open="reg">Register</button>
+<button class="btn pri apr" data-open="post">＋ New post</button><button class="btn apr" data-open="prd">My profile</button>
+<button class="btn adm" id="admbtn">🛠 Admin panel</button><button class="btn in" id="logout">Log out</button>
+</nav></div></header>
+
+<div class="hero" id="top"><div class="w">
+<img class="hl" src="logo.png" alt="Government Barishal College logo"><br>
+<span class="pill">Government Barishal College</span>
+<h1>Soil Science Department<br>Student Notice Board</h1>
+<p>Notices, assignments and exam updates shared by students and approved by the admin.</p>
+<a class="btn" href="#board">Browse notices</a>
+</div></div>
+
+<div class="w themes"><b>🎨 Choose a theme</b><div class="sw" id="sw"></div></div>
+
+<section id="board"><div class="w">
+<div class="hd"><small>LATEST UPDATES</small><h2>Notice Board</h2></div>
+<div class="tools"><input id="q" type="search" placeholder="Search title, details or author…" aria-label="Search">
+<div class="chips" id="chips"><button class="on" data-c="All">All</button><button data-c="Notice">Notice</button><button data-c="Assignment">Assignment</button><button data-c="Exam">Exam</button></div></div>
+<div class="grid" id="list"></div>
+</div></section>
+
+<section id="students"><div class="w">
+<div class="hd"><small>STUDENT DIRECTORY</small><h2>Our Students</h2></div>
+<div id="dir"></div>
+</div></section>
+
+<footer><div class="w">
+<b>BGC Soil Science — Student Notice Board</b><br>
+Department of Soil Science, Government Barishal College, Barishal, Bangladesh.<br>
+<a class="au" href="https://m.me/j/AbYNxrHn5dzL3oXn/?send_source=gc%3Acopy_invite_link_t" target="_blank" rel="noopener">💬 Soil Science 2025-2026 Notice Group (Messenger)</a><br>
+Unofficial student-run website. Posts are shared by students and approved by the admin.
+</div></footer>
+
+<dialog id="login"><button class="btn x" data-close>✕</button>
+<h2>Log in</h2><div class="note">Use your email and password. Your email must be verified first.</div>
+<form id="lf"><label>Email</label><input name="e" type="email" required autocomplete="email">
+<label>Password</label><input name="p" type="password" required autocomplete="current-password">
+<p class="msg"></p><button class="btn pri" style="width:100%">Log in</button>
+<p class="xt" style="text-align:center"><button type="button" class="au" id="forgot">Forgot password?</button></p></form></dialog>
+
+<dialog id="reg"><button class="btn x" data-close>✕</button>
+<h2>Create account</h2><div class="note">We will email you a verification link (this is not an SMS code). Your email and phone number stay private (only the admin can see them). The admin must approve your account before it appears in the student list.</div>
+<form id="rf"><label>Full name</label><input name="n" required minlength="2" maxlength="80">
+<label>Roll number</label><input name="r" required maxlength="20">
+<label>Phone number * (private, only the admin can see)</label><input name="ph" type="tel" required maxlength="20" placeholder="01XXXXXXXXX" autocomplete="tel">
+<label>Department</label><select disabled><option>Soil Science</option></select>
+<label>Year</label><select name="y" class="yr"></select>
+<label>Session</label><select name="s" class="ss"></select>
+<label>Email</label><input name="e" type="email" required autocomplete="email">
+<label>Password (min 8 characters)</label><input name="p" type="password" minlength="8" required autocomplete="new-password">
+<label>Confirm password</label><input name="p2" type="password" minlength="8" required autocomplete="new-password">
+<p class="msg"></p><button class="btn pri" style="width:100%">Register</button></form></dialog>
+
+<dialog id="adm"><button class="btn x" data-close>✕</button>
+<h2>Admin Information</h2>
+<div class="note" style="margin-top:14px"><b>SAIMOON</b><br>Roll: 253321<br>1st Year Honours, Soil Science<br>Session: 2025-2026<br>Government Barishal College</div>
+<div style="display:grid;gap:8px">
+<a class="btn pri" style="text-align:center;text-decoration:none" href="https://wa.me/8801610426493" target="_blank" rel="noopener">💬 WhatsApp: +880 1610-426493</a>
+<a class="btn" style="text-align:center;text-decoration:none" href="https://m.me/Saidur.R.Saimoon" target="_blank" rel="noopener">✉️ Message on Messenger</a>
+<a class="btn" style="text-align:center;text-decoration:none" href="https://www.facebook.com/Saidur.R.Saimoon" target="_blank" rel="noopener">📘 Facebook profile</a>
+</div></dialog>
+
+<dialog id="prof"><button class="btn x" data-close>✕</button><div id="pbody"></div></dialog>
+
+<dialog id="prd"><button class="btn x" data-close>✕</button>
+<h2>My profile</h2><div class="note">Name, roll, year and session are visible to verified students. Your email is private.</div>
+<form id="mf"><label>Full name</label><input name="n" required minlength="2" maxlength="80">
+<label>Roll number</label><input name="r" required maxlength="20">
+<label>Phone number * (private, only the admin can see)</label><input name="ph" type="tel" required maxlength="20" placeholder="01XXXXXXXXX" autocomplete="tel">
+<label>Year</label><select name="y" class="yr"></select>
+<label>Session</label><select name="s" class="ss"></select>
+<p class="msg"></p><button class="btn pri" style="width:100%">Save</button></form></dialog>
+
+<dialog id="post"><button class="btn x" data-close>✕</button>
+<h2>New post</h2><div class="note">Posts are reviewed by the admin before they appear publicly. Optional fields can stay blank.</div>
+<form id="pf"><label>Category</label><select id="pcat" name="cat"><option>Notice</option><option>Assignment</option><option>Exam</option></select>
+<label>Title *</label><input name="title" required maxlength="150">
+<div data-for="Assignment"><label>Subject / course</label><input name="subject" maxlength="100"></div>
+<div data-for="Assignment Exam"><label>Department</label><input name="department" maxlength="60" placeholder="Soil Science">
+<label>Year / class</label><input name="classYear" maxlength="40" placeholder="e.g. 1st Year"></div>
+<div data-for="Notice Assignment Exam"><label id="dl">Date</label><input name="noticeDate" type="date"></div>
+<div data-for="Assignment"><label>Issued date</label><input name="issuedDate" type="date">
+<label>Submission deadline</label><input name="deadline" type="date">
+<label>Teacher (Sir/Madam)</label><input name="teacher" maxlength="80"></div>
+<div data-for="Exam"><label>Exam time</label><input name="examTime" maxlength="40" placeholder="e.g. 10:00 AM"></div>
+<label>Details *</label><textarea name="description" required maxlength="5000"></textarea>
+<div data-for="Notice Assignment Exam"><label>Attachment link (PDF/image, optional)</label><input name="attachmentUrl" type="url" maxlength="500" placeholder="https://…"></div>
+<p class="msg"></p><button class="btn pri" style="width:100%">Submit for approval</button></form></dialog>
+
+<dialog id="ap"><button class="btn x" data-close>✕</button>
+<h2>Admin panel</h2>
+<div class="acts"><button class="btn pri" id="aposts">Posts</button><button class="btn" id="astu">Students</button></div>
+<div class="af"><select id="afs"><option value="pending">Pending</option><option value="published">Published</option><option value="rejected">Rejected</option><option value="all">All</option></select>
+<select id="afc"><option>All</option><option>Notice</option><option>Assignment</option><option>Exam</option></select>
+<input id="afd" type="date" aria-label="Date"><input id="afq" type="search" placeholder="Search…"></div>
+<div id="alist" class="grid" style="grid-template-columns:1fr"></div></dialog>
+
+<div id="toast" role="status"></div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
