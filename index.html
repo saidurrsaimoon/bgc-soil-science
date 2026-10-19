@@ -122,5 +122,15 @@ Unofficial student-run website. Posts are shared by students and approved by the
 
 <div id="toast" role="status"></div>
 <script type="module" src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(
+      "/bgc-soil-science/service-worker.js",
+      { scope: "/bgc-soil-science/" }
+    ).catch(console.error);
+  });
+}
+</script>
 </body>
 </html>
