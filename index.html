@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BGC Soil Science — Student Notice Board</title>
+<link rel="icon" href="logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+<div class="vb pnd"><b>Waiting for admin approval.</b> Your email is verified. After the admin confirms your account, you can post and see the student list.</div>
+<div class="vb unv"><b>Please verify your email.</b> We sent a link to your inbox (check Spam too). After clicking it, press “I’ve verified”.<br>
+<button class="btn" id="resend">Resend email</button><button class="btn" onclick="location.reload()">I’ve verified</button></div>
+
+<header class="site-header"><div class="w bar">
+<a class="brand" href="#top" aria-label="BGC Soil Science home"><span class="brand-seal"><img src="logo.svg" alt=""></span><span class="brand-wordmark"><strong>Soil Science</strong><small>GOVERNMENT BARISHAL COLLEGE</small></span></a>
+<div class="header-right"><span class="session-chip"><i></i> SESSION 2025–2026</span><button class="btn burger" id="bg" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+<nav id="nav" aria-label="Main navigation">
+<div class="nav-links"><a class="nav-link" href="#top"><span class="nav-glyph">⌂</span> Home</a><a class="nav-link" href="#board"><span class="nav-glyph">▤</span> Notices</a><a class="nav-link" href="#students"><span class="nav-glyph">♧</span> Students</a></div>
+<div class="nav-account"><button class="btn nav-login out" data-open="login"><span class="nav-button-icon">↪</span> Log in</button><button class="btn nav-register pri out" data-open="reg">Create account <span>↗</span></button><button class="btn nav-register pri apr" data-open="post">＋ New post</button><button class="btn nav-login apr" data-open="prd">My profile</button><button class="btn nav-register pri adm" id="admbtn">⚙ Admin panel</button><button class="btn nav-login in" id="logout">Log out ↗</button></div>
+<details class="nav-more"><summary aria-label="More options"><span class="more-dots"><i></i><i></i><i></i></span><span>More</span></summary><div class="more-menu"><button data-open="adm"><span>ⓘ</span> Admin information</button><a href="https://m.me/j/AbYNxrHn5dzL3oXn/?send_source=gc%3Acopy_invite_link_t" target="_blank" rel="noopener"><span>↗</span> Notice group</a><a href="#theme-tools"><span>◐</span> Change appearance</a></div></details>
+</nav></div></header>
+
+<div class="hero" id="top"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="w hero-layout">
+<div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> THE STUDENT INFORMATION HUB</div>
+<span class="pill">GOVERNMENT BARISHAL COLLEGE · 2025–2026</span>
+<h1>Knowledge grows<br>from the <em class="typing-wrap"><span id="typedWord">ground up.</span><span class="typing-caret" aria-hidden="true"></span></em></h1>
+<p>Your department's central space for notices, assignments, exam updates and student connections.</p>
+<div class="hero-actions"><a class="btn hero-main" href="#board"><span>Explore notice board</span> <b>↘</b></a><button class="btn hero-ghost" data-open="reg">Join the community <span>＋</span></button></div>
+<div class="hero-footnote"><span class="hero-mark">✳</span><span>SOIL SCIENCE DEPARTMENT<br><b>Learn · Share · Grow together</b></span></div></div>
+<div class="hero-art"><div class="art-ring ring-a"></div><div class="art-ring ring-b"></div><div class="art-core"><img class="hl" src="logo.svg" alt="Government Barishal College Soil Science emblem"></div><div class="art-label label-top"><span>01</span> KNOWLEDGE</div><div class="art-label label-bottom"><span>02</span> COMMUNITY</div><div class="leaf leaf-a">✳</div><div class="leaf leaf-b">✦</div></div>
+</div></div>
+<div class="quick-stats w"><div class="stat-item"><span class="stat-icon">▤</span><div><strong id="statNotices">—</strong><span>Published updates</span></div></div><div class="stat-item"><span class="stat-icon">◷</span><div><strong>24/7</strong><span>Access anytime</span></div></div><div class="stat-item"><span class="stat-icon">⌁</span><div><strong>3</strong><span>Post categories</span></div></div><div class="stat-item"><span class="stat-icon">✳</span><div><strong>One place</strong><span>Our department hub</span></div></div></div>
+
+<div class="w themes" id="theme-tools"><b>🎨 Choose a theme</b><div class="sw" id="sw"></div></div>
+
+<div class="feature-ribbon w" aria-label="Website features"><span>✦ Responsive design</span><span>↗ Share any notice</span><span>◈ Save for later</span><span>⌁ Search & filter</span><span>✳ Built for Soil Science</span></div>
+<div class="ticker-band" aria-label="Department motto"><div class="ticker-track"><span>✳ LEARN TOGETHER</span><b>·</b><span>GROW WITH KNOWLEDGE</span><b>·</b><span>SOIL SCIENCE COMMUNITY</span><b>·</b><span>STAY CURIOUS</span><b>·</b><span>✳ LEARN TOGETHER</span><b>·</b><span>GROW WITH KNOWLEDGE</span><b>·</b><span>SOIL SCIENCE COMMUNITY</span><b>·</b><span>STAY CURIOUS</span></div></div>
+<section id="board"><div class="w">
+<div class="section-head"><div class="hd"><small>YOUR DEPARTMENT, AT A GLANCE</small><h2>Notice board<span class="heading-period">.</span></h2><p class="section-intro">Everything important, gathered in one place.</p></div><div class="section-stamp"><span>✳</span><b>STAY<br>INFORMED</b></div></div>
+<div class="tools"><label class="searchbox"><span>⌕</span><input id="q" type="search" placeholder="Search title, details or author…" aria-label="Search"></label>
+<div class="chips" id="chips"><button class="on" data-c="All">All</button><button data-c="Notice">Notice</button><button data-c="Assignment">Assignment</button><button data-c="Exam">Exam</button><button data-saved="true" aria-pressed="false">♡ Saved</button></div></div>
+<div class="grid" id="list"></div><p class="share-hint"><span>↗</span> Found something useful? Use <b>Share</b> on any notice to send a direct link to friends or classmates.</p>
+</div></section>
+
+<section id="students"><div class="w">
+<div class="section-head"><div class="hd"><small>PEOPLE MAKE THE DEPARTMENT</small><h2>Our community<span class="heading-period">.</span></h2><p class="section-intro">Meet fellow students and explore their published contributions.</p></div><div class="section-stamp"><span>⌁</span><b>GROW<br>TOGETHER</b></div></div>
+<div id="dir"></div>
+</div></section>
+
+<footer><div class="footer-top w"><div><span class="footer-kicker">ROOTED IN LEARNING</span><h2>BGC Soil Science<span>.</span></h2><p>A shared space for our department to learn, connect and grow.</p></div><a class="btn footer-top-link" href="#top">Back to top ↑</a></div><div class="w footer-details">
+<b>BGC Soil Science — Student Notice Board</b><br>
+Department of Soil Science, Government Barishal College, Barishal, Bangladesh.<br>
+<a class="au" href="https://m.me/j/AbYNxrHn5dzL3oXn/?send_source=gc%3Acopy_invite_link_t" target="_blank" rel="noopener">💬 Soil Science 2025-2026 Notice Group (Messenger)</a><br>
+Unofficial student-run website. Posts are shared by students and approved by the admin.
+</div></footer>
+
+<dialog id="login"><button class="btn x" data-close>✕</button>
+<h2>Log in</h2><div class="note">Use your email and password. Your email must be verified first.</div>
+<form id="lf"><label>Email</label><input name="e" type="email" required autocomplete="email">
+<label>Password</label><input name="p" type="password" required autocomplete="current-password">
+<p class="msg"></p><button class="btn pri" style="width:100%">Log in</button>
+<p class="xt" style="text-align:center"><button type="button" class="au" id="forgot">Forgot password?</button></p></form></dialog>
+
+<dialog id="reg"><button class="btn x" data-close>✕</button>
+<h2>Create account</h2><div class="note">We will email you a verification link (this is not an SMS code). Your email and phone number stay private (only the admin can see them). The admin must approve your account before it appears in the student list.</div>
+<form id="rf"><label>Full name</label><input name="n" required minlength="2" maxlength="80">
+<label>Roll number</label><input name="r" required maxlength="20">
+<label>Phone number * (private, only the admin can see)</label><input name="ph" type="tel" required maxlength="20" placeholder="01XXXXXXXXX" autocomplete="tel">
+<label>Department</label><select disabled><option>Soil Science</option></select>
+<label>Year</label><select name="y" class="yr"></select>
+<label>Session</label><select name="s" class="ss"></select>
+<label>Email</label><input name="e" type="email" required autocomplete="email">
+<label>Password (min 8 characters)</label><input name="p" type="password" minlength="8" required autocomplete="new-password">
+<label>Confirm password</label><input name="p2" type="password" minlength="8" required autocomplete="new-password">
+<p class="msg"></p><button class="btn pri" style="width:100%">Register</button></form></dialog>
+
+<dialog id="adm"><button class="btn x" data-close>✕</button>
+<h2>Admin Information</h2>
+<div class="note" style="margin-top:14px"><b>SAIMOON</b><br>Roll: 253321<br>1st Year Honours, Soil Science<br>Session: 2025-2026<br>Government Barishal College</div>
+<div style="display:grid;gap:8px">
+<a class="btn pri" style="text-align:center;text-decoration:none" href="https://wa.me/8801610426493" target="_blank" rel="noopener">💬 WhatsApp: +880 1610-426493</a>
+<a class="btn" style="text-align:center;text-decoration:none" href="https://m.me/Saidur.R.Saimoon" target="_blank" rel="noopener">✉️ Message on Messenger</a>
+<a class="btn" style="text-align:center;text-decoration:none" href="https://www.facebook.com/Saidur.R.Saimoon" target="_blank" rel="noopener">📘 Facebook profile</a>
+</div></dialog>
+
+<dialog id="prof"><button class="btn x" data-close>✕</button><div id="pbody"></div></dialog>
+
+<dialog id="prd"><button class="btn x" data-close>✕</button>
+<h2>My profile</h2><div class="note">Name, roll, year and session are visible to verified students. Your email is private.</div>
+<form id="mf"><label>Full name</label><input name="n" required minlength="2" maxlength="80">
+<label>Roll number</label><input name="r" required maxlength="20">
+<label>Phone number * (private, only the admin can see)</label><input name="ph" type="tel" required maxlength="20" placeholder="01XXXXXXXXX" autocomplete="tel">
+<label>Year</label><select name="y" class="yr"></select>
+<label>Session</label><select name="s" class="ss"></select>
+<p class="msg"></p><button class="btn pri" style="width:100%">Save</button></form></dialog>
+
+<dialog id="post"><button class="btn x" data-close>✕</button>
+<h2>New post</h2><div class="note">Posts are reviewed by the admin before they appear publicly. Optional fields can stay blank.</div>
+<form id="pf"><label>Category</label><select id="pcat" name="cat"><option>Notice</option><option>Assignment</option><option>Exam</option></select>
+<label>Title *</label><input name="title" required maxlength="150">
+<div data-for="Assignment"><label>Subject / course</label><input name="subject" maxlength="100"></div>
+<div data-for="Assignment Exam"><label>Department</label><input name="department" maxlength="60" placeholder="Soil Science">
+<label>Year / class</label><input name="classYear" maxlength="40" placeholder="e.g. 1st Year"></div>
+<div data-for="Notice Assignment Exam"><label id="dl">Date</label><input name="noticeDate" type="date"></div>
+<div data-for="Assignment"><label>Issued date</label><input name="issuedDate" type="date">
+<label>Submission deadline</label><input name="deadline" type="date">
+<label>Teacher (Sir/Madam)</label><input name="teacher" maxlength="80"></div>
+<div data-for="Exam"><label>Exam time</label><input name="examTime" maxlength="40" placeholder="e.g. 10:00 AM"></div>
+<label>Details *</label><textarea name="description" required maxlength="5000"></textarea>
+<div data-for="Notice Assignment Exam"><label>Attachment link (PDF/image, optional)</label><input name="attachmentUrl" type="url" maxlength="500" placeholder="https://…"></div>
+<p class="msg"></p><button class="btn pri" style="width:100%">Submit for approval</button></form></dialog>
+
+<dialog id="ap"><button class="btn x" data-close>✕</button>
+<h2>Admin panel</h2>
+<div class="acts"><button class="btn pri" id="aposts">Posts</button><button class="btn" id="astu">Students</button></div>
+<div class="af"><select id="afs"><option value="pending">Pending</option><option value="published">Published</option><option value="rejected">Rejected</option><option value="all">All</option></select>
+<select id="afc"><option>All</option><option>Notice</option><option>Assignment</option><option>Exam</option></select>
+<input id="afd" type="date" aria-label="Date"><input id="afq" type="search" placeholder="Search…"></div>
+<div id="alist" class="grid" style="grid-template-columns:1fr"></div></dialog>
+
+<button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button><div id="toast" role="status"></div>
+<script type="module" src="script.js?v=10"></script>
+</body>
+</html>
